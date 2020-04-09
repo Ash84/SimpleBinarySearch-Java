@@ -27,9 +27,9 @@ class SearchBinary {
 
         static void printArray(int[] array) {
             int taille = array.length;
-            System.out.println("Affichage du tableau : ");
+            System.out.println("Array display : ");
             if (taille == 0) {
-                System.out.println("Tableau vide...");
+                System.out.println("Empty array...");
                 return;
             }
             System.out.print("[");
@@ -46,7 +46,7 @@ class SearchBinary {
             int  i, k, lengthleft, lengthright = 0;
             if (size < 2)
                 return;
-        // Si le tableau possède un nombre de cases impair.
+        // If the array has an odd number of boxes.
             if (size%2 != 0) {
                 int midsize = (size-1)/2;
                 lengthleft = midsize;
@@ -59,7 +59,7 @@ class SearchBinary {
     
             int[] arrayA = new int[lengthleft];
             int[] arrayB = new int[lengthright];
-        // Découpage en 2 tableaux du tableau à trier.
+        // Array to sort cut in half.
             k = 0;
             for (i = 0; i < lengthleft; i++)
                 arrayA[i] = array[i];
@@ -111,9 +111,9 @@ class SearchBinary {
             int longueur = tab.length;
             int retour = SearchBinary(tab, 0, longueur -1, search) +1;
             if ( retour != 0) 
-                System.out.println(search + " a été trouvé position = " + retour);
+                System.out.println(search + " was found position = " + retour);
             else 
-                System.out.println(search + " n'a pas été trouvé" );            
+                System.out.println(search + " wasn't found." );            
         }
 
     public static void main(String[] args) {
