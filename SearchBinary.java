@@ -102,16 +102,16 @@ class SearchBinary {
         }
     
         static void test() {
-            int[] tab = genRandArray();
-            printArray(tab);
+            int[] arr = genRandArray();
+            printArray(arr);
             Scanner sc = new Scanner(System.in);
             System.out.println("Enter number to search");
             int search  = sc.nextInt();
             sc.close();
-            int longueur = tab.length;
-            int retour = SearchBinary(tab, 0, longueur -1, search) +1;
-            if ( retour != 0) 
-                System.out.println(search + " was found position = " + retour);
+            int length = arr.length;
+            int res = SearchBinary(arr, 0, length -1, search) +1;
+            if (res != 0) 
+                System.out.println(search + " was found position = " + res);
             else 
                 System.out.println(search + " wasn't found." );            
         }
